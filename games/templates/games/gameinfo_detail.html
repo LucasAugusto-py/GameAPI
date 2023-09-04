@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Detalles del juego{% endblock title %}
+{% block content %}
+    
+    <h1> {{ game.name }} </h1>
+    <p>Fecha de salida: {{ object.release_date }}</p>
+    <p>Precio: {{ object.price }}</p>
+    <p>Editor: {{ object.publisher }}</p>
+    <p>Desarrollador: {{ object.developer }}</p>
+
+    <a href="{% url 'games:game_list' %}">Volver a la pagina inicial</a>
+{% endblock content %}

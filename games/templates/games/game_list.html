@@ -1,0 +1,10 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Juegos{% endblock title %}
+{% block content %}
+    {% for game in game_list %}
+    <h2>
+        <a href="{% url 'games:game_detail' game.game_id game.name|slugify %}">{{ game.name }}</a>
+    </h2>
+    {% endfor %}
+{% endblock content %}
